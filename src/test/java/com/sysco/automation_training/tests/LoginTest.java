@@ -53,7 +53,8 @@ public class LoginTest {
         SelectedCategory.clickOnShoeSize();
         SelectedCategory.clickProductAddToCart();
         softAssert.assertTrue(SelectedCategory.issSccefulMessageDispalyed() , "SucceMessage is not displayed after adding item to cart");
-        SecureCheckout.getEmailAdress(cu);
+       // SecureCheckout.getEmailAdress(cu);
+        System.out.println("Gayya");
 
 
 

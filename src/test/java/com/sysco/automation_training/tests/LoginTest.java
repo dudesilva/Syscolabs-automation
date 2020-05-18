@@ -52,14 +52,9 @@ public class LoginTest {
         SelectedCategory.clickOnShoeProduct();
         SelectedCategory.clickOnShoeSize();
         SelectedCategory.clickProductAddToCart();
-        softAssert.assertTrue(SelectedCategory.issSccefulMessageDispalyed() , "SucceMessage is not displayed after adding item to cart");
-       // SecureCheckout.getEmailAdress(cu);
-        System.out.println("Gayya");
-
-
-
-
-
+        softAssert.assertTrue(SelectedCategory.issSccefulMessageDispalyed() , "SuccessMessage is not displayed after adding item to cart");
+        SecureCheckout.getEmailAdress(userCreatedData.customerEmail);
+        SecureCheckout.getFirstName(userCreatedData.firstNmae);
 
     }
 }

@@ -14,7 +14,7 @@ import sun.rmi.runtime.Log;
 
 public class LoginTest {
 
-    static UserCreatedData userCreatedData = new UserCreatedData;
+    static UserCreatedData userCreatedData = new UserCreatedData();
 
 
     @Test
@@ -26,7 +26,7 @@ public class LoginTest {
 
     }
 
-    /*@Test(alwaysRun = true,dependsOnMethods = "verifyLoginButtonDisplay")
+    @Test(alwaysRun = true,dependsOnMethods = "verifyLoginButtonDisplay")
     public static void verifyLoginErrorMessageForInvalidPassword(){
         SoftAssert softAssert = new SoftAssert();
         Login.loginFunctionality(userCreatedData.email ,userCreatedData.incorrectPassword);
@@ -34,7 +34,7 @@ public class LoginTest {
         softAssert.assertAll();
 
 
-    }*/
+    }
 
     @Test(alwaysRun = true ,dependsOnMethods = "verifyLoginButtonDisplay")
    public static void verifySuccessfulUserLogin(){
@@ -45,7 +45,7 @@ public class LoginTest {
     }
 
     @Test(alwaysRun = true, dependsOnMethods = "verifySuccessfulUserLogin")
-    public static void verifyUserAbleToSelectCategory(){
+    public static void EndtoEndScenario(){
         SoftAssert softAssert = new SoftAssert();
         Categories.clickOnMenuItem();
         Categories.clickOnSubMenuItem();
@@ -54,7 +54,17 @@ public class LoginTest {
         SelectedCategory.clickProductAddToCart();
         softAssert.assertTrue(SelectedCategory.issSccefulMessageDispalyed() , "SuccessMessage is not displayed after adding item to cart");
         SecureCheckout.getEmailAdress(userCreatedData.customerEmail);
-        SecureCheckout.getFirstName(userCreatedData.firstNmae);
+        SecureCheckout.getFirstName(userCreatedData.firstName);
+        SecureCheckout.getLastName(userCreatedData.lastName);
+        SecureCheckout.getCompany(userCreatedData.company);
+        SecureCheckout.getStreetAddress1(userCreatedData.address1);
+        SecureCheckout.getSuburb(userCreatedData.suburb);
+        SecureCheckout.selectState(userCreatedData.state);
+        SecureCheckout.getPostCode(userCreatedData.postCode);
+        SecureCheckout.selectCountry(userCreatedData.country);
+        SecureCheckout.selectRegion(userCreatedData.Region);
+        SecureCheckout.getPhonrNumber(userCreatedData.phoneNumber);
+        SecureCheckout.clickContinue();
 
     }
 }

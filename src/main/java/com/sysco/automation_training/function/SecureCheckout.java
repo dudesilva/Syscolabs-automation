@@ -21,7 +21,7 @@ public class SecureCheckout {
         secureCheckoutPage.setTxtLastName(lastName);
     }
 
-    public static void getStreeAddress1(String streetAddress1){
+    public static void getStreetAddress1(String streetAddress1){
         secureCheckoutPage.setTxtAddress1(streetAddress1);
     }
 
@@ -48,6 +48,16 @@ public class SecureCheckout {
 
     public static void getPhonrNumber(String phoneNumber){
         secureCheckoutPage.setTxtPhoneNumber(phoneNumber);
+    }
+
+    public static void getCompany(String company){
+        secureCheckoutPage.setTxtCompany(company);
+
+    }
+
+    public static void clickContinue(){
+        secureCheckoutPage.clickContinue();
+
     }
 
 

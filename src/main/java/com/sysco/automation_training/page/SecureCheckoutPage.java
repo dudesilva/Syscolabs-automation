@@ -19,7 +19,7 @@ public class SecureCheckoutPage {
     protected By btnContinue = By.xpath("//button[@ class = 'button -primary -expanded']");
     protected By txtPhoneRegion = By.id("/localization-select-field");
 
-    //button[@ class = 'button -primary -expanded']
+
     SyscoLabUI syscoLabUI = new SyscoLabUI();
 
     public void setTxtEmailAddress(String custmoremailAddress){
